@@ -14,7 +14,7 @@ set_context:
 	eksctl utils write-kubeconfig --cluster=robin-personal-cluster --set-kubeconfig-context=true
 
 enable_iam_sa_provider:
-	eksctl utils associate-iam-oidc-provider --cluster=robin-personal-cluster --approve
+	eksctl utils associate-iam-oidc-provider --cluster=robin-personal-cluster --region us-east-2 --approve
 
 create_cluster_role:
 	kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.4/docs/examples/rbac-role.yaml
