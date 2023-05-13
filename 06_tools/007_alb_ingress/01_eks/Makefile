@@ -32,6 +32,7 @@ create_service_account:
       --name=aws-load-balancer-controller \
       --attach-policy-arn=arn:aws:iam::617960797257:policy/AWSLoadBalancerControllerIAMPolicy \
       --override-existing-serviceaccounts \
+      --region us-east-1
       --approve
 
 deploy_cert_manager:
